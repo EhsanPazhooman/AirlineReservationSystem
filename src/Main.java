@@ -5,8 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
-
+    public static void main(String[] args){
+            Login login = new Login();
+            Login.mainMenu();
     }
 
     public static void pressEnterToContinue()
