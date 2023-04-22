@@ -62,7 +62,7 @@ public class Login {
     }
 
     /////////Method for checking correct username & password////////
-    static public boolean checklogin(String username,String password){
+    static public boolean checkLogin(String username,String password){
         users_arr = users.toArray(users_arr);
         for(int i=0 ; i<users_arr.length ; i++){
             if(users_arr[i].getUsername().equals(username)&&
@@ -85,11 +85,11 @@ public class Login {
             Admin.adminMenu();
         }
 
-        if(checklogin(input_username,input_password)){
+        if(checkLogin(input_username,input_password)){
             System.out.println("User"+" "+input_username+" "+"login succesfully");
         }
 
-        if(!checklogin(input_username,input_password)){
+        if(!checkLogin(input_username,input_password)){
             System.out.println("Invalid username or password");
             Main.pressEnterToContinue();
             mainMenu();

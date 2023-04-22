@@ -10,7 +10,6 @@ public class Ticket {
 
     public Ticket(String passengerName,String flightId,String origin, String destination, String date, String time, int price) {
         this.passengerName = passengerName;
-        //this.ticketId = ticketId;
         this.flightId = flightId;
         this.origin = origin;
         this.destination = destination;

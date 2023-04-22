@@ -27,13 +27,16 @@ public class Passenger {
                 Main.pressEnterToContinue();
                 break;
             case "3":
-
+                Tickets.bookingTicket();
+                Main.pressEnterToContinue();
                 break;
             case "4":
-
+                Tickets.bookedTickets();
+                Main.pressEnterToContinue();
                 break;
             case "5":
-
+                Tickets.removeTicket();
+                Main.pressEnterToContinue();
                 break;
             case "6":
                 System.out.println("How much do you want to charge your account ?");

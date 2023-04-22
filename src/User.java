@@ -5,6 +5,10 @@ public class User {
     private String password;
     private int charge;
 
+    static Ticket[] tickets;
+
+    static Ticket ticket;
+
     ////////////Empty Constructor////////////
     public User(){
 
@@ -14,6 +18,11 @@ public class User {
         this.username = username;
         this.password = password;
     }
+    //////////Ticket Constructor////////////
+    public User(Ticket[] tickets) {
+        this.tickets = tickets;
+    }
+
     ////////////Username getter & setter//////////////
     public String getUsername() {
         return username;
@@ -35,5 +44,28 @@ public class User {
         this.charge = charge;
     }
 
+    //////////////Ticket[] getter & setter//////////
+    public Ticket[] getTickets() {
+        return tickets;
+    }
 
+    public void setTickets(Ticket[] tickets) {
+        this.tickets = tickets;
+    }
+
+    ///////////////Ticket getter & setter///////////
+    public static Ticket getTicket() {
+        return ticket;
+    }
+
+    public static void setTicket(Ticket ticket) {
+        User.ticket = ticket;
+    }
+    ////////////////////////////////////////////////
+    @Override
+    public String toString() {
+        return "User{" +
+                "tickets=" + Arrays.toString(tickets) +
+                '}';
+    }
 }

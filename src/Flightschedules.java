@@ -135,7 +135,6 @@ public class Flightschedules {
     }
     //////////// Method for printing flight schedules ///////////
     public void displayFlights() {
-        System.out.println(flights.size());
         for (int i = 0; i < flights.size(); i++) {
             System.out.println(flights.get(i));
         }

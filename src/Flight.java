@@ -29,6 +29,7 @@ public class Flight {
     public void setFlightid(String flightid) {
         this.flightId = flightId;
     }
+
     ////////////// Origin getter & setter /////////////////
     public String getOrigin() {
         return origin;
@@ -37,6 +38,7 @@ public class Flight {
     public void setOrigin(String origin) {
         this.origin = origin;
     }
+
     /////////// Destination getter & setter ///////////
     public String getDestination() {
         return destination;
@@ -45,6 +47,7 @@ public class Flight {
     public void setDestination(String destination) {
         this.destination = destination;
     }
+
     //////////// Date getter & setter //////////////
     public String getDate() {
         return date;
@@ -61,6 +64,7 @@ public class Flight {
     public void setTime(String time) {
         this.time = time;
     }
+
     ///////////// Price getter & setter //////////////
     public int getPrice() {
         return price;
@@ -69,6 +73,7 @@ public class Flight {
     public void setPrice(int price) {
         this.price = price;
     }
+
     ///////////// Seats getter & setter //////////////
     public int getSeats() {
         return seats;
@@ -76,6 +81,7 @@ public class Flight {
     public void setSeats(int seats) {
         this.seats = seats;
     }
+
     //////////////////////////////////////////////////
     @Override
     public String toString() {
