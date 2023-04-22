@@ -6,8 +6,11 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args){
-            Login login = new Login();
-            Login.mainMenu();
+        Login login = new Login();
+        Flightschedules flightschedules = new Flightschedules();
+        flightschedules.add_default_flights();
+        Login.mainMenu();
+
     }
 
     public static void pressEnterToContinue()
