@@ -14,20 +14,20 @@ public class Admin {
         System.out.println("0" + '-' + "Sign Out");
 
 
-
+        Flightschedules flightShedules = new Flightschedules();
         String option = scanner.nextLine();
 
         switch (option) {
             case "1":
-
+                flightShedules.addFlight();
                 break;
             case "2":
-
+                flightShedules.update();
                 break;
             case "3":
-
+                flightShedules.remove();
             case "4":
-
+                flightShedules.displayFlights();
             case "0":
                 Login.mainMenu();
             default:
