@@ -20,9 +20,8 @@ public class Passenger {
 
         switch (option) {
             case "1":
-
+                Login.changePassword();
                 break;
-
             case "2":
                 searchFlights();
                 Main.pressEnterToContinue();

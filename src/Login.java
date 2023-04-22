@@ -95,6 +95,20 @@ public class Login {
             mainMenu();
         }
     }
-
+    ///////////////// Method for Changing Password ///////////////
+    public static void changePassword(){
+        System.out.println("Enter your current password :");
+        String old_password = scanner.nextLine();
+        System.out.println("Enter your new Password");
+        String new_password = scanner.nextLine();
+        for (int i = 0; i < users_arr.length; i++) {
+            if(users_arr[i].getPassword().equals(old_password)){
+                users_arr[i].setPassword(new_password);
+                System.out.println("Password has been changed");
+                Main.pressEnterToContinue();
+                Login.mainMenu();
+            }
+        }
+    }
 }
 
