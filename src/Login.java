@@ -86,7 +86,8 @@ public class Login {
         }
 
         if(checkLogin(input_username,input_password)){
-            System.out.println("User"+" "+input_username+" "+"login succesfully");
+            System.out.println("User"+" "+input_username+" "+"login successfully");
+            Passenger.passengerMenu();
         }
 
         if(!checkLogin(input_username,input_password)){
