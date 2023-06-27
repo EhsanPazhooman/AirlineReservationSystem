@@ -6,7 +6,7 @@ public class Flightschedules {
     static Scanner input = new Scanner(System.in);
     static ArrayList<Flight> flights = new ArrayList<Flight>();
 
-    static Iterator<Flight> flightList = flights.iterator();
+    //static Iterator<Flight> flightList = flights.iterator();
     public static Flight[] flights_arr = new Flight[50];
 
     static int seats;

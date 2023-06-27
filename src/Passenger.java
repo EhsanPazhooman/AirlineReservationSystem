@@ -31,7 +31,7 @@ public class Passenger {
                 Main.pressEnterToContinue();
                 break;
             case "4":
-                Tickets.bookedTickets();
+                Tickets.printTickets();
                 Main.pressEnterToContinue();
                 break;
             case "5":

@@ -27,7 +27,8 @@ public class Tickets {
         for (int i = 0; i < Login.users_arr.length; i++)
         {
             if (Login.users_arr[i].getUsername().equals(Login.input_username) &&
-                    Login.users_arr[i].getPassword().equals(Login.input_password)) {
+                    Login.users_arr[i].getPassword().equals(Login.input_password))
+            {
                 for (int j = 0; j < Flightschedules.flights.size(); j++) {
                     if (Flightschedules.flights.get(j).getFlightid().equals(inputId)) {
                         Ticket ticket = new Ticket(Login.input_username,
@@ -41,18 +42,24 @@ public class Tickets {
 
                         boughtTickets.add(ticket);
                         ticketsArr = boughtTickets.toArray(ticketsArr);
-                        System.out.println(ticketsArr.length);
-                        System.out.println(boughtTickets.size());
+                        //System.out.println(ticketsArr.length);
+                        //System.out.println(boughtTickets.size());
                     }
                 }
             }
         }
-        printTickets();
+        //printTickets();
     }
     //////////////////Method for printing purchased tickets////////////
     public static void printTickets(){
-        for (int i = 0; i < ticketsArr.length; i++) {
-            System.out.println(ticketsArr[i]);
+        /*for (int i = 0; i < ticketsArr.length; i++) {
+            if (ticketsArr[i].getPassengerName().equals(Login.input_username)){
+                System.out.println(ticketsArr[i]);}
+        }*/
+        for (int i = 0 ; i < boughtTickets.size();i++){
+            if (boughtTickets.get(i).getPassengerName().equals(Login.input_username)){
+                System.out.println(boughtTickets.get(i));
+            }
         }
     }
     //////////////////Method for reserving flight ticket////////////////
@@ -79,6 +86,7 @@ public class Tickets {
                         {
                             Flightschedules.flights.get(j).setSeats(Flightschedules.flights.get(j).getSeats()-1);
                             Login.users_arr[i].setCharge(Login.users_arr[i].getCharge()-Flightschedules.flights.get(j).getPrice());
+                            Tickets.bookedTickets();
                         }
 
                     }
@@ -92,14 +100,21 @@ public class Tickets {
             if(Login.users.get(i).getUsername().equals(Login.input_username)&&
                     Login.users.get(i).getPassword().equals(Login.input_password))
             {
-                System.out.println("Enter your ticketID");
+                System.out.println("Enter your ticketID :");
                 String ticketId = scanner.nextLine();
                 int ticketID = Integer.parseInt(ticketId);
                 for (int j = 0; j < boughtTickets.size(); j++) {
                     if(ticketID==boughtTickets.get(j).getTicketId())
                     {
+                        Login.users_arr[i].setCharge(Login.users_arr[i].getCharge()+boughtTickets.get(j).getPrice());
+                        for (int k = 0; k < Flightschedules.flights.size(); k++) {
+                            if (Flightschedules.flights.get(k).getFlightid().equals(boughtTickets.get(j).getFlightId())){
+                                int currentSeat = Flightschedules.flights.get(k).getSeats();
+                                int newSeat = currentSeat + 1;
+                                Flightschedules.flights.get(k).setSeats(newSeat);
+                            }
+                        }
                         boughtTickets.remove(j);
-
                     }
                 }
             }
